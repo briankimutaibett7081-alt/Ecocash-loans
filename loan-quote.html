@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>EcoCash - Personal Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Header */
+        .header {
+            background-color: #006b3a;
+            padding: 20px 16px 16px 16px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Progress steps */
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .step {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .step.active {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+
+        /* White card */
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .card > p {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 24px;
+        }
+
+        /* Form groups */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            background-color: white;
+        }
+
+        input:focus, select:focus {
+            border-color: #006b3a;
+        }
+
+        input::placeholder {
+            color: #adb5bd;
+            font-size: 14px;
+        }
+
+        /* Row for first name and last name */
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row .form-group {
+            flex: 1;
+        }
+
+        /* Button group */
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .back-btn {
+            flex: 1;
+            background-color: #e9ecef;
+            color: #1a1a1a;
+            border: none;
+            padding: 14px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .back-btn:active {
+            background-color: #dee2e6;
+        }
+
+        .continue-btn {
+            flex: 1;
+            background-color: #006b3a;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .continue-btn:active {
+            background-color: #005a30;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>EcoCash</h1>
+        <div class="progress-steps">
+            <span class="step">1. Loan</span>
+            <span class="step">2. Details</span>
+            <span class="step active">3. Personal</span>
+            <span class="step">4. Address</span>
+            <span class="step">5. Work</span>
+            <span class="step">6. Review</span>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <div class="card">
+            <h2>Personal Information</h2>
+            <p>We need your details to process your application</p>
+            
+            <!-- First Name and Last Name in a row -->
+            <div class="row">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name">
+                </div>
+            </div>
+            
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="gender">
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" id="dob" placeholder="Enter your date of birth">
+            </div>
+            
+            <!-- National ID Number -->
+            <div class="form-group">
+                <label>National ID Number</label>
+                <input type="text" id="nationalId" placeholder="e.g. 63-123456A78">
+            </div>
+            
+            <!-- Email Address -->
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+            </div>
+            
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            
+            <!-- Buttons -->
+            <div class="button-group">
+                <button class="back-btn" onclick="goBack()">Back</button>
+                <button class="continue-btn" onclick="goNext()">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Go to next page
+        function goNext() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const gender = document.getElementById('gender').value;
+            const dob = document.getElementById('dob').value;
+            const nationalId = document.getElementById('nationalId').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if(!firstName) {
+                alert('Please enter your first name');
+                return;
+            }
+            if(!lastName) {
+                alert('Please enter your last name');
+                return;
+            }
+            if(!gender) {
+                alert('Please select your gender');
+                return;
+            }
+            if(!dob) {
+                alert('Please enter your date of birth');
+                return;
+            }
+            if(!nationalId) {
+                alert('Please enter your National ID number');
+                return;
+            }
+            if(!email) {
+                alert('Please enter your email address');
+                return;
+            }
+            if(!phone) {
+                alert('Please enter your phone number');
+                return;
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
+            localStorage.setItem('gender', gender);
+            localStorage.setItem('dob', dob);
+            localStorage.setItem('nationalId', nationalId);
+            localStorage.setItem('email', email);
+            localStorage.setItem('phone', phone);
+            
+            // Go to address page
+            window.location.href = 'address.html';
+        }
+        
+        // Go back to previous page
+        function goBack() {
+            window.location.href = 'personal-details.html';
+        }
+    </script>
+
+</body>
+</html>
